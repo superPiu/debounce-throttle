@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>防抖节流</title>
+    <style>
+        input{
+            padding: 0 10px;
+            height: 40px;
+            width: 200px;
+            font-size: 14px;
+        }
+        button{
+            margin: 30px 0;
+            height: 40px;
+        }
+    </style>
+</head>
+<body>
+    <h1>防抖节流demo</h1>
+    <div><input id="debounceInput" type="text" placeholder="我是一个防抖的文本框哦"></div>
+    <button id="throttleBtn">我是节流按钮,来疯狂点击吧</button>
+</body>
+<script>
+    document.getElementById('debounceInput').addEventListener('keyup',debounce(function(e){
+        console.log(this,e)
+    }))
+    document.getElementById('throttleBtn').addEventListener('click',throttle(function(e){
+        console.log(this,e)
+    }))
+    function debounce (fn,delay=200){
+        let timer = null;
+        return function(){
+            let context = this,
+            args = arguments
+            //console.log(args)
+            if(timer){
+                clearTimeout(timer)
+            }
+            timer = setTimeout(()=>{
+                fn.apply(this,args)
+                //console.log(this)
+                //fn(arguments);
+            },delay)
+        }
+    }
+    function throttle (fn,delay=1000){
+        let timer = null 
+        return function(){
+            let context = this,
+            args = arguments
+            if(timer) return;
+            timer = setTimeout(()=>{
+                fn.apply(context,args)
+                timer = null
+            },delay)
+        }
+    }
+</script>
+</html>
