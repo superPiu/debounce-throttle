@@ -1,0 +1,31 @@
+{
+  "name": "debounce-throttle",
+  "version": "1.0.0",
+  "description": "",
+  "main": "debounce-throttle.js",
+  "scripts": {
+    "dev": "webpack-dev-server --open",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/superPiu/debounce-throttle.git"
+  },
+  "author": "piu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/superPiu/debounce-throttle/issues"
+  },
+  "homepage": "https://github.com/superPiu/debounce-throttle#readme",
+  "dependencies": {
+    "html-webpack-plugin": "^5.5.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.16.8",
+    "@babel/core": "^7.16.7",
+    "@babel/preset-env": "^7.16.8",
+    "webpack": "^5.65.0",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.7.2"
+  }
+}
