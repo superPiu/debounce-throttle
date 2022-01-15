@@ -2,7 +2,7 @@ function debounce (fn,delay=200){
     let timer = null;
     return function(){
         let context = this,
-        args = arguments
+        args = [...arguments]
         if(timer){
             clearTimeout(timer)
         }
@@ -15,7 +15,7 @@ function throttle (fn,delay=1000){
     let timer = null 
     return function(){
         let context = this,
-        args = arguments
+        args = [...arguments]
         if(timer) return;
         timer = setTimeout(()=>{
             fn.apply(context,args)

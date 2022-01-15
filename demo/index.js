@@ -1,4 +1,4 @@
-import {debounce,throttle} from './debounce-throttle'
+import {debounce,throttle} from 'debounce-and-throttle'
 document.getElementById('debounceInput').addEventListener('keyup',debounce(function(e){
     console.log(this,e)
 }))

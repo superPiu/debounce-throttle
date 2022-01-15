@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/superPiu/debounce-throttle#readme",
   "dependencies": {
+    "debounce-and-throttle": "^1.0.1",
     "html-webpack-plugin": "^5.5.0"
   },
   "devDependencies": {
